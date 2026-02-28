@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renuka Dixit | Biomedical Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- CANVAS BG -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>RD<span class="logo-bracket">]</span>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:renukadxt4210@gmail.com" class="nav-email">renukadxt4210@gmail.com</a>
+      <a href="https://afcafab4-3cb6-44fb-ba33-879c0ff43639.filesusr.com/ugd/ff58a3_3bb0b02b605a4428b6db212402240c0c.pdf" target="_blank" class="nav-cv">↓ CV</a>
+    </div>
+  </nav>
+
+  <!-- SIDE NAV DOTS -->
+  <div id="side-nav">
+    <a href="#hero"    class="dot active" data-label="Home"></a>
+    <a href="#about"   class="dot" data-label="About"></a>
+    <a href="#timeline" class="dot" data-label="Journey"></a>
+    <a href="#projects" class="dot" data-label="Projects"></a>
+    <a href="#skills"  class="dot" data-label="Skills"></a>
+    <a href="#contact" class="dot" data-label="Contact"></a>
+  </div>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section id="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-status">
+          <span class="pulse-dot"></span>
+          <span>Available for Opportunities</span>
+        </div>
+        <h1 class="hero-name">
+          <span class="line-reveal">Renuka</span>
+          <span class="line-reveal delay-1">Dixit</span>
+        </h1>
+        <div class="hero-title-wrap">
+          <span class="hero-title-line"></span>
+          <span class="hero-title-text">Biomedical Engineer</span>
+        </div>
+        <p class="hero-desc">
+          MSc Biomedical Engineering · University of Minnesota. <br/>
+          Bridging medical device innovation, regulatory science &amp; clinical data analytics.
+        </p>
+        <div class="hero-cta">
+          <a href="#about" class="btn-main">Explore ↓</a>
+          <a href="https://www.linkedin.com/in/dixit-renuka" target="_blank" class="btn-ghost">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-portrait-wrap">
+          <div class="portrait-rings">
+            <div class="ring r1"></div>
+            <div class="ring r2"></div>
+            <div class="ring r3"></div>
+          </div>
+          <div class="portrait-img">
+            <img src="https://static.wixstatic.com/media/ff58a3_fb16194dbb7b481696a39792f7d7e9da~mv2.jpg/v1/crop/x_0,y_0,w_5184,h_5173/fill/w_400,h_400,al_c,q_80/ff58a3_fb16194dbb7b481696a39792f7d7e9da~mv2.jpg" alt="Renuka Dixit" />
+          </div>
+          <!-- floating stat cards -->
+          <div class="stat-card sc1">
+            <span class="sc-num" data-count="7">0</span>
+            <span class="sc-label">Years in Field</span>
+          </div>
+          <div class="stat-card sc2">
+            <span class="sc-num" data-count="9">0</span>
+            <span class="sc-label">Roles & Internships</span>
+          </div>
+          <div class="stat-card sc3">
+            <span class="sc-num" data-count="30">0</span>+
+            <span class="sc-label">Lab Techniques</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARQUEE STRIP -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span>Medical Device Design</span><span class="sep">✦</span>
+        <span>Regulatory Affairs</span><span class="sep">✦</span>
+        <span>Clinical Data Analytics</span><span class="sep">✦</span>
+        <span>Bioinformatics</span><span class="sep">✦</span>
+        <span>Quality Assurance</span><span class="sep">✦</span>
+        <span>Machine Learning</span><span class="sep">✦</span>
+        <span>ISO 13485</span><span class="sep">✦</span>
+        <span>FDA QSR</span><span class="sep">✦</span>
+        <span>Medical Device Design</span><span class="sep">✦</span>
+        <span>Regulatory Affairs</span><span class="sep">✦</span>
+        <span>Clinical Data Analytics</span><span class="sep">✦</span>
+        <span>Bioinformatics</span><span class="sep">✦</span>
+        <span>Quality Assurance</span><span class="sep">✦</span>
+        <span>Machine Learning</span><span class="sep">✦</span>
+        <span>ISO 13485</span><span class="sep">✦</span>
+        <span>FDA QSR</span><span class="sep">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section id="about">
+    <div class="section-header">
+      <div class="sh-label"><span class="mono">// 01</span> About</div>
+    </div>
+    <div class="about-layout">
+      <div class="about-headline">
+        <h2>Engineering solutions <em>at the intersection</em> of medicine & technology.</h2>
+      </div>
+      <div class="about-body">
+        <p>I graduated with a Master's in Biomedical Engineering from the University of Minnesota–Twin Cities in May 2025. With experience spanning medical device companies, pharmaceutical QA, and clinical data analytics, I bring a uniquely holistic perspective to healthcare innovation.</p>
+        <p>My passion lies in developing patient-centered solutions — from early-stage device design to navigating complex regulatory landscapes (FDA QSR, EU MDR, ISO 13485). Beyond the lab and the code, I'm an avid traveler, reader, sketcher, and murder-mystery enthusiast.</p>
+        <div class="about-chips">
+          <span>✈️ Traveling</span>
+          <span>📚 Reading</span>
+          <span>✏️ Sketching</span>
+          <span>🔍 Murder Mysteries</span>
+          <span>🏃 Active Lifestyle</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE DOMAIN CARDS -->
+    <div class="domain-cards">
+      <div class="domain-card" data-domain="devices">
+        <div class="dc-icon">⚕</div>
+        <h3>Medical Devices</h3>
+        <p>Design, development, V&V, GD&T, SolidWorks, 3D printing, ISO 14971</p>
+      </div>
+      <div class="domain-card" data-domain="regulatory">
+        <div class="dc-icon">📋</div>
+        <h3>Regulatory Affairs</h3>
+        <p>FDA QSR · 21 CFR 820 · EU MDR · ISO 13485 · IEC-60601 · GMP · GDP</p>
+      </div>
+      <div class="domain-card" data-domain="data">
+        <div class="dc-icon">📊</div>
+        <h3>Clinical Data & Software</h3>
+        <p>SQL · Python · PowerBI · Azure · Machine Learning · Clinical Trials</p>
+      </div>
+      <div class="domain-card" data-domain="lab">
+        <div class="dc-icon">🔬</div>
+        <h3>Laboratory Science</h3>
+        <p>cryo-EM · qRT-PCR · Flow Cytometry · Organoids · Confocal Microscopy</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ TIMELINE ═══════════════════════════ -->
+  <section id="timeline">
+    <div class="section-header">
+      <div class="sh-label"><span class="mono">// 02</span> Journey</div>
+    </div>
+    <h2 class="section-title">Education &amp; Experience</h2>
+
+    <!-- TOGGLE BUTTONS -->
+    <div class="tl-toggle">
+      <button class="tl-btn active" data-tab="all">All</button>
+      <button class="tl-btn" data-tab="education">Education</button>
+      <button class="tl-btn" data-tab="experience">Experience</button>
+    </div>
+
+    <div class="tl-wrapper">
+      <div class="tl-line"></div>
+      <div class="tl-items">
+
+        <div class="tl-item edu" data-type="education">
+          <div class="tl-dot edu-dot"></div>
+          <div class="tl-date">2023 – 2025</div>
+          <div class="tl-card">
+            <div class="tl-badge edu-badge">Education</div>
+            <h3>MSc Biomedical Engineering</h3>
+            <p class="tl-org">University of Minnesota – Twin Cities</p>
+          </div>
+        </div>
+
+        <div class="tl-item exp" data-type="experience">
+          <div class="tl-dot exp-dot"></div>
+          <div class="tl-date">Jan 2024 – May 2025</div>
+          <div class="tl-card">
+            <div class="tl-badge exp-badge">Research</div>
+            <h3>Graduate Researcher</h3>
+            <p class="tl-org">University of Minnesota</p>
+          </div>
+        </div>
+
+        <div class="tl-item exp" data-type="experience">
+          <div class="tl-dot exp-dot"></div>
+          <div class="tl-date">May – Aug 2024</div>
+          <div class="tl-card">
+            <div class="tl-badge exp-badge">Industry</div>
+            <h3>QA Intern</h3>
+            <p class="tl-org">Promed Molded Products</p>
+          </div>
+        </div>
+
+        <div class="tl-item edu" data-type="education">
+          <div class="tl-dot edu-dot"></div>
+          <div class="tl-date">2017 – 2021</div>
+          <div class="tl-card">
+            <div class="tl-badge edu-badge">Education</div>
+            <h3>BSc Biomedical Engineering <em>(Honors)</em></h3>
+            <p class="tl-org">Shri G.S. Institute of Technology &amp; Science</p>
+          </div>
+        </div>
+
+        <div class="tl-item exp" data-type="experience">
+          <div class="tl-dot exp-dot"></div>
+          <div class="tl-date">Sep 2021 – Sep 2023</div>
+          <div class="tl-card">
+            <div class="tl-badge exp-badge">Industry</div>
+            <h3>Clinical Data Analyst</h3>
+            <p class="tl-org">Cognizant Technology Solutions</p>
+          </div>
+        </div>
+
+        <div class="tl-item exp" data-type="experience">
+          <div class="tl-dot exp-dot"></div>
+          <div class="tl-date">Jul – Oct 2022</div>
+          <div class="tl-card">
+            <div class="tl-badge exp-badge">Research</div>
+            <h3>R&amp;D Intern</h3>
+            <p class="tl-org">Indian Institute of Technology</p>
+          </div>
+        </div>
+
+        <div class="tl-item exp" data-type="experience">
+          <div class="tl-dot exp-dot"></div>
+          <div class="tl-date">Jul – Sep 2021</div>
+          <div class="tl-card">
+            <div class="tl-badge exp-badge">Industry</div>
+            <h3>Biomedical Device Design Intern</h3>
+            <p class="tl-org">Healthcare Technology &amp; Innovation Center Ltd.</p>
+          </div>
+        </div>
+
+        <div class="tl-item exp" data-type="experience">
+          <div class="tl-dot exp-dot"></div>
+          <div class="tl-date">Apr 2020 – Apr 2021</div>
+          <div class="tl-card">
+            <div class="tl-badge exp-badge">Research</div>
+            <h3>Undergraduate Researcher</h3>
+            <p class="tl-org">Shri G.S. Institute of Technology &amp; Science</p>
+          </div>
+        </div>
+
+        <div class="tl-item exp" data-type="experience">
+          <div class="tl-dot exp-dot"></div>
+          <div class="tl-date">May – Jun 2019</div>
+          <div class="tl-card">
+            <div class="tl-badge exp-badge">Industry</div>
+            <h3>R&amp;D Intern</h3>
+            <p class="tl-org">Shree Pacetronix Ltd.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  <section id="projects">
+    <div class="section-header">
+      <div class="sh-label"><span class="mono">// 03</span> Projects</div>
+    </div>
+    <h2 class="section-title">Selected Work</h2>
+
+    <div class="projects-list">
+
+      <div class="proj-row">
+        <div class="proj-num">01</div>
+        <div class="proj-info">
+          <h3>Graduate Research — University of Minnesota</h3>
+          <p>Integrated bioinformatics, machine learning, and advanced laboratory techniques including organoid models, cryo-EM, and electrophysiological recording to advance biomedical understanding.</p>
+          <div class="proj-tags">
+            <span>Machine Learning</span><span>Bioinformatics</span><span>Organoids</span><span>cryo-EM</span>
+          </div>
+        </div>
+        <div class="proj-domains"><span class="pd research">Research</span></div>
+      </div>
+
+      <div class="proj-row">
+        <div class="proj-num">02</div>
+        <div class="proj-info">
+          <h3>QA Process Optimization — Promed Molded Products</h3>
+          <p>Implemented QA protocols using Gage R&R, Lean Six Sigma, and QCBD to improve manufacturing compliance with FDA QSR and ISO 13485 standards.</p>
+          <div class="proj-tags">
+            <span>ISO 13485</span><span>Lean Six Sigma</span><span>FDA QSR</span><span>QCBD</span>
+          </div>
+        </div>
+        <div class="proj-domains"><span class="pd industry">Industry</span></div>
+      </div>
+
+      <div class="proj-row">
+        <div class="proj-num">03</div>
+        <div class="proj-info">
+          <h3>Clinical Data Analysis — Cognizant Technology Solutions</h3>
+          <p>Analyzed clinical trial datasets using SQL, Python, and PowerBI. Ensured data integrity under HIPAA, GDP, and 21 CFR 820 across multiple healthcare client engagements.</p>
+          <div class="proj-tags">
+            <span>Python</span><span>SQL</span><span>PowerBI</span><span>HIPAA</span><span>Clinical Trials</span>
+          </div>
+        </div>
+        <div class="proj-domains"><span class="pd data">Data</span></div>
+      </div>
+
+      <div class="proj-row">
+        <div class="proj-num">04</div>
+        <div class="proj-info">
+          <h3>Biomedical Device Design — HT&amp;IC Ltd.</h3>
+          <p>Contributed to early-stage device design and prototyping. Applied engineering principles and user-centered methodologies to develop patient-focused healthcare solutions.</p>
+          <div class="proj-tags">
+            <span>Device Design</span><span>Prototyping</span><span>SolidWorks</span>
+          </div>
+        </div>
+        <div class="proj-domains"><span class="pd devices">Devices</span></div>
+      </div>
+
+      <div class="proj-row">
+        <div class="proj-num">05</div>
+        <div class="proj-info">
+          <h3>R&amp;D Research — Indian Institute of Technology</h3>
+          <p>Participated in cutting-edge R&D projects at IIT, contributing to biomedical innovation through experimental design, data collection, and analysis.</p>
+          <div class="proj-tags">
+            <span>R&D</span><span>Research</span><span>Experimental Design</span>
+          </div>
+        </div>
+        <div class="proj-domains"><span class="pd research">Research</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <section id="skills">
+    <div class="section-header">
+      <div class="sh-label"><span class="mono">// 04</span> Skills</div>
+    </div>
+    <h2 class="section-title">Technical Expertise</h2>
+
+    <!-- SKILL CATEGORY FILTER -->
+    <div class="skill-filter">
+      <button class="sf-btn active" data-cat="all">All</button>
+      <button class="sf-btn" data-cat="programming">Programming</button>
+      <button class="sf-btn" data-cat="software">Software</button>
+      <button class="sf-btn" data-cat="regulatory">Regulatory</button>
+      <button class="sf-btn" data-cat="lab">Lab</button>
+      <button class="sf-btn" data-cat="technical">Technical</button>
+    </div>
+
+    <div class="skills-cloud" id="skills-cloud">
+      <!-- Programming -->
+      <span class="sk programming large">Python</span>
+      <span class="sk programming large">SQL</span>
+      <span class="sk programming medium">R</span>
+      <span class="sk programming medium">JavaScript</span>
+      <span class="sk programming medium">Biopython</span>
+      <span class="sk programming small">C#</span>
+      <span class="sk programming small">C</span>
+      <span class="sk programming small">.NET</span>
+      <span class="sk programming small">Angular</span>
+      <span class="sk programming small">HTML5</span>
+      <span class="sk programming small">CSS3</span>
+      <span class="sk programming small">Linux</span>
+      <!-- Software -->
+      <span class="sk software large">MATLAB</span>
+      <span class="sk software large">PowerBI</span>
+      <span class="sk software medium">SolidWorks</span>
+      <span class="sk software medium">Azure</span>
+      <span class="sk software medium">PyMol</span>
+      <span class="sk software medium">ChimeraX</span>
+      <span class="sk software small">MiniTab</span>
+      <span class="sk software small">MODELLER</span>
+      <span class="sk software small">SaaS</span>
+      <!-- Regulatory -->
+      <span class="sk regulatory large">ISO 13485</span>
+      <span class="sk regulatory large">FDA QSR</span>
+      <span class="sk regulatory medium">EU MDR</span>
+      <span class="sk regulatory medium">HIPAA</span>
+      <span class="sk regulatory medium">ISO 14971</span>
+      <span class="sk regulatory small">21 CFR 820</span>
+      <span class="sk regulatory small">IEC-60601</span>
+      <span class="sk regulatory small">GMP</span>
+      <span class="sk regulatory small">GDP</span>
+      <!-- Lab -->
+      <span class="sk lab large">cryo-EM</span>
+      <span class="sk lab large">qRT-PCR</span>
+      <span class="sk lab medium">Flow Cytometry</span>
+      <span class="sk lab medium">Western Blot</span>
+      <span class="sk lab medium">Cell Culture</span>
+      <span class="sk lab medium">Organoid Models</span>
+      <span class="sk lab small">RNA Isolation</span>
+      <span class="sk lab small">Immunofluorescence</span>
+      <span class="sk lab small">Gel Electrophoresis</span>
+      <span class="sk lab small">Live Cell Imaging</span>
+      <span class="sk lab small">Confocal Microscopy</span>
+      <span class="sk lab small">Electrophysiology</span>
+      <span class="sk lab small">Tissue Engineering</span>
+      <span class="sk lab small">cDNA Synthesis</span>
+      <span class="sk lab small">Spheroids</span>
+      <span class="sk lab small">Fluorescent IHC</span>
+      <!-- Technical -->
+      <span class="sk technical large">Machine Learning</span>
+      <span class="sk technical large">Bioinformatics</span>
+      <span class="sk technical medium">3D Printing</span>
+      <span class="sk technical medium">Arduino</span>
+      <span class="sk technical medium">AWS</span>
+      <span class="sk technical medium">Git</span>
+      <span class="sk technical small">Lean Six Sigma</span>
+      <span class="sk technical small">Gage R&R</span>
+      <span class="sk technical small">AutoCAD</span>
+      <span class="sk technical small">Jira</span>
+      <span class="sk technical small">ImageJ</span>
+      <span class="sk technical small">GD&T</span>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="certs-row">
+      <div class="cert-item">
+        <span class="cert-icon">★</span>
+        <div>
+          <div class="cert-title">Bachelor's with Honors</div>
+          <div class="cert-sub">Shri G.S. Institute of Technology</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <span class="cert-icon">✦</span>
+        <div>
+          <div class="cert-title">AMA PRA Category 1 Credit</div>
+          <div class="cert-sub">Medical Education Certification</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <span class="cert-icon">◈</span>
+        <div>
+          <div class="cert-title">BMES Member</div>
+          <div class="cert-sub">Biomedical Engineering Society</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section id="contact">
+    <div class="section-header">
+      <div class="sh-label"><span class="mono">// 05</span> Contact</div>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-left">
+        <h2>Let's build something <em>meaningful</em> together.</h2>
+        <p>Open to opportunities in medical device design, regulatory affairs, clinical research, and biomedical software engineering.</p>
+        <div class="contact-links">
+          <a href="mailto:renukadxt4210@gmail.com" class="contact-link">
+            <span class="cl-type">Email</span>
+            <span class="cl-val">renukadxt4210@gmail.com ↗</span>
+          </a>
+          <a href="tel:9522457027" class="contact-link">
+            <span class="cl-type">Phone</span>
+            <span class="cl-val">(952) 245-7027</span>
+          </a>
+          <a href="https://www.linkedin.com/in/dixit-renuka" target="_blank" class="contact-link">
+            <span class="cl-type">LinkedIn</span>
+            <span class="cl-val">dixit-renuka ↗</span>
+          </a>
+        </div>
+        <a href="https://afcafab4-3cb6-44fb-ba33-879c0ff43639.filesusr.com/ugd/ff58a3_3bb0b02b605a4428b6db212402240c0c.pdf" target="_blank" class="btn-main">Download CV ↓</a>
+      </div>
+      <div class="contact-right">
+        <div class="helix-wrap">
+          <canvas id="helix-canvas" width="260" height="400"></canvas>
+          <div class="helix-label">DNA Helix · Biomedical</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="mono">© 2025 Renuka Dixit</span>
+      <span>Biomedical Engineer · All Rights Reserved</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
