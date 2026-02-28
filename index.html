@@ -15,13 +15,21 @@
   <div id="cursor"></div>
   <div id="cursor-dot"></div>
 
-  <!-- CANVAS BG -->
+  <!-- BG CANVAS (neural/circuit dots) -->
   <canvas id="bg-canvas"></canvas>
+
+  <!-- ECG LINE OVERLAY -->
+  <div class="ecg-overlay">
+    <canvas id="ecg-canvas"></canvas>
+  </div>
 
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-logo">
-      <span class="logo-bracket">[</span>RD<span class="logo-bracket">]</span>
+      <svg class="logo-pulse" viewBox="0 0 40 20" fill="none">
+        <polyline points="0,10 6,10 9,3 12,17 15,10 21,10 24,5 27,15 30,10 40,10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      </svg>
+      <span>RD</span>
     </div>
     <div class="nav-right">
       <a href="mailto:renukadxt4210@gmail.com" class="nav-email">renukadxt4210@gmail.com</a>
@@ -31,15 +39,14 @@
 
   <!-- SIDE NAV DOTS -->
   <div id="side-nav">
-    <a href="#hero"    class="dot active" data-label="Home"></a>
-    <a href="#about"   class="dot" data-label="About"></a>
-    <a href="#timeline" class="dot" data-label="Journey"></a>
-    <a href="#projects" class="dot" data-label="Projects"></a>
-    <a href="#skills"  class="dot" data-label="Skills"></a>
-    <a href="#contact" class="dot" data-label="Contact"></a>
+    <a href="#hero"      class="dot active" data-label="Home"></a>
+    <a href="#about"     class="dot" data-label="About"></a>
+    <a href="#journey"   class="dot" data-label="Journey"></a>
+    <a href="#skills"    class="dot" data-label="Skills"></a>
+    <a href="#contact"   class="dot" data-label="Contact"></a>
   </div>
 
-  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <!-- ═══ HERO ═══ -->
   <section id="hero">
     <div class="hero-grid">
       <div class="hero-left">
@@ -56,15 +63,15 @@
           <span class="hero-title-text">Biomedical Engineer</span>
         </div>
         <p class="hero-desc">
-          Mechanical Test Engineer - Virtual Incision
-          MSc Biomedical Engineering - University of Minnesota. <br/>
-          <!-- Bridging medical device innovation, regulatory science &amp; clinical data analytics. -->
+          MSc Biomedical Engineering · University of Minnesota.<br/>
+          Bridging medical device innovation, regulatory science &amp; clinical data analytics.
         </p>
         <div class="hero-cta">
           <a href="#about" class="btn-main">Explore ↓</a>
           <a href="https://www.linkedin.com/in/dixit-renuka" target="_blank" class="btn-ghost">LinkedIn ↗</a>
         </div>
       </div>
+
       <div class="hero-right">
         <div class="hero-portrait-wrap">
           <div class="portrait-rings">
@@ -72,21 +79,27 @@
             <div class="ring r2"></div>
             <div class="ring r3"></div>
           </div>
+          <!-- Medical device cross icon -->
+          <svg class="med-cross" viewBox="0 0 60 60" fill="none">
+            <rect x="22" y="5" width="16" height="50" rx="3" fill="currentColor" opacity="0.15"/>
+            <rect x="5" y="22" width="50" height="16" rx="3" fill="currentColor" opacity="0.15"/>
+            <rect x="23" y="6" width="14" height="48" rx="2" stroke="currentColor" stroke-width="1" fill="none" opacity="0.4"/>
+            <rect x="6" y="23" width="48" height="14" rx="2" stroke="currentColor" stroke-width="1" fill="none" opacity="0.4"/>
+          </svg>
           <div class="portrait-img">
             <img src="https://static.wixstatic.com/media/ff58a3_fb16194dbb7b481696a39792f7d7e9da~mv2.jpg/v1/crop/x_0,y_0,w_5184,h_5173/fill/w_400,h_400,al_c,q_80/ff58a3_fb16194dbb7b481696a39792f7d7e9da~mv2.jpg" alt="Renuka Dixit" />
           </div>
-          <!-- floating stat cards -->
           <div class="stat-card sc1">
-            <span class="sc-num" data-count="8">0</span>
+            <span class="sc-num" data-count="7">0</span>
             <span class="sc-label">Years in Field</span>
           </div>
           <div class="stat-card sc2">
-            <span class="sc-num" data-count="10">0</span>
-            <span class="sc-label">Industry Roles</span>
+            <span class="sc-num" data-count="9">0</span>
+            <span class="sc-label">Roles &amp; Internships</span>
           </div>
           <div class="stat-card sc3">
-            <span class="sc-num" data-count="50+">0</span>
-            <span class="sc-label">Skills & Techniques</span>
+            <span class="sc-num" data-count="30">0</span><span class="sc-plus">+</span>
+            <span class="sc-label">Lab Techniques</span>
           </div>
         </div>
       </div>
@@ -95,270 +108,238 @@
     <!-- MARQUEE STRIP -->
     <div class="marquee-wrap">
       <div class="marquee-track">
-        <span>Medical Device Design</span><span class="sep">✦</span>
-        <span>Regulatory Affairs</span><span class="sep">✦</span>
-        <span>Clinical Data Analytics</span><span class="sep">✦</span>
-        <span>Rapid Prototyping</span><span class="sep">✦</span>
-        <span>Quality Assurance</span><span class="sep">✦</span>
-        <span>Machine Learning</span><span class="sep">✦</span>
-        <span>ISO 13485</span><span class="sep">✦</span>
-        <span>New Product Development</span><span class="sep">✦</span>
-        <span>Wearable Devices</span><span class="sep">✦</span>
-        <span>SaMD</span><span class="sep">✦</span>
-        <span>Medical Robotics</span><span class="sep">✦</span>
-        <span>FDA QSR</span><span class="sep">✦</span>
-        <span>Medical Device Design</span><span class="sep">✦</span>
-        <span>Regulatory Affairs</span><span class="sep">✦</span>
-        <span>Clinical Data Analytics</span><span class="sep">✦</span>
-        <span>Rapid Prototyping</span><span class="sep">✦</span>
-        <span>Quality Assurance</span><span class="sep">✦</span>
-        <span>Machine Learning</span><span class="sep">✦</span>
-        <span>ISO 13485</span><span class="sep">✦</span>
-        <span>FDA QSR</span><span class="sep">✦</span>
+        <span>Medical Device Design</span><span class="sep">◆</span>
+        <span>Regulatory Affairs</span><span class="sep">◆</span>
+        <span>Clinical Data Analytics</span><span class="sep">◆</span>
+        <span>Bioinformatics</span><span class="sep">◆</span>
+        <span>Quality Assurance</span><span class="sep">◆</span>
+        <span>ISO 13485</span><span class="sep">◆</span>
+        <span>FDA QSR</span><span class="sep">◆</span>
+        <span>EU MDR</span><span class="sep">◆</span>
+        <span>Machine Learning</span><span class="sep">◆</span>
+        <span>Medical Device Design</span><span class="sep">◆</span>
+        <span>Regulatory Affairs</span><span class="sep">◆</span>
+        <span>Clinical Data Analytics</span><span class="sep">◆</span>
+        <span>Bioinformatics</span><span class="sep">◆</span>
+        <span>Quality Assurance</span><span class="sep">◆</span>
+        <span>ISO 13485</span><span class="sep">◆</span>
+        <span>FDA QSR</span><span class="sep">◆</span>
+        <span>EU MDR</span><span class="sep">◆</span>
+        <span>Machine Learning</span><span class="sep">◆</span>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <!-- ═══ ABOUT ═══ -->
   <section id="about">
     <div class="section-header">
-      <div class="sh-label"><span class="mono"></span> My Story</div>
+      <div class="sh-label"><span class="mono">// 01</span> About</div>
     </div>
     <div class="about-layout">
       <div class="about-headline">
-        <h2>Engineering solutions <em>at the intersection</em> of medicine & technology.</h2>
+        <h2>Engineering solutions <em>at the intersection</em> of medicine &amp; technology.</h2>
       </div>
       <div class="about-body">
-        <p>I graduated with a Master's in Biomedical Engineering from the University of Minnesota–Twin Cities. With experience spanning from medical device, pharmaceutical QA, and clinical data analytics, I bring a uniquely holistic perspective to healthcare innovation.</p>
-        <p>My passion lies in developing patient-centeric solutions, from early-stage device design to navigating complex regulatory landscapes (FDA QSR, EU MDR, ISO 13485). </p>
-        <p>Beyond the lab and the code, I love exploring new places, getting lost in a good book or getting diving into a gripping murder mystery! </p>
-        <!--<div class="about-chips">
+        <p>I graduated with a Master's in Biomedical Engineering from the University of Minnesota–Twin Cities in May 2025. With experience spanning medical device companies, pharmaceutical QA, and clinical data analytics, I bring a uniquely holistic perspective to healthcare innovation.</p>
+        <p>My passion lies in developing patient-centered solutions — from early-stage device design to navigating complex regulatory landscapes. Beyond the lab and the code, I'm an avid traveler, reader, sketcher, and murder-mystery enthusiast.</p>
+        <div class="about-chips">
           <span>✈️ Traveling</span>
           <span>📚 Reading</span>
           <span>✏️ Sketching</span>
           <span>🔍 Murder Mysteries</span>
           <span>🏃 Active Lifestyle</span>
-        </div> -->
+        </div>
       </div>
     </div>
 
-    <!-- INTERACTIVE DOMAIN CARDS -->
+    <!-- DOMAIN CARDS -->
     <div class="domain-cards">
-      <div class="domain-card" data-domain="devices">
-        <div class="dc-icon">⚕</div>
+      <div class="domain-card">
+        <div class="dc-icon-wrap"><svg viewBox="0 0 32 32" fill="none"><rect x="11" y="2" width="10" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="28" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/></svg></div>
         <h3>Medical Devices</h3>
-        <p>Design · Development · V&V · GD&T · SolidWorks · 3D printing · Rapid Protyping · Gage R&R · Lean Six Sigma</p>
+        <p>Design, V&amp;V, GD&amp;T, SolidWorks, 3D printing, ISO 14971</p>
       </div>
-      <div class="domain-card" data-domain="regulatory">
-        <div class="dc-icon">📋</div>
+      <div class="domain-card">
+        <div class="dc-icon-wrap"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/><polyline points="4,13 28,13" stroke="currentColor" stroke-width="1" opacity="0.5"/><polyline points="4,20 28,20" stroke="currentColor" stroke-width="1" opacity="0.5"/><polyline points="11,4 11,28" stroke="currentColor" stroke-width="1" opacity="0.5"/></svg></div>
         <h3>Regulatory Affairs</h3>
-        <p>FDA QSR · 21 CFR 820 · EU MDR · ISO 13485 · IEC-60601 · GMP · GDP, ISO 14971</p>
+        <p>FDA QSR · 21 CFR 820 · EU MDR · ISO 13485 · IEC-60601</p>
       </div>
-      <div class="domain-card" data-domain="data">
-        <div class="dc-icon">📊</div>
-        <h3>Clinical Data Analytics</h3>
-        <p>SQL · Python · PowerBI · Azure · Machine Learning · Clinical Trials · C++</p>
+      <div class="domain-card">
+        <div class="dc-icon-wrap"><svg viewBox="0 0 32 32" fill="none"><polyline points="2,26 8,14 13,20 18,8 23,18 28,10 32,10" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+        <h3>Clinical Data &amp; Software</h3>
+        <p>SQL · Python · PowerBI · Azure · ML · Clinical Trials</p>
       </div>
-      <div class="domain-card" data-domain="lab">
-        <div class="dc-icon">🔬</div>
-        <h3>Laboratory Techniques</h3>
-        <p>cryo-EM · qRT-PCR · Flow Cytometry · Organoids · Confocal Microscopy · ImageJ</p>
+      <div class="domain-card">
+        <div class="dc-icon-wrap"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="26" x2="16" y2="30" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="16" x2="6" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="26" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <h3>Laboratory Science</h3>
+        <p>cryo-EM · qRT-PCR · Flow Cytometry · Organoids</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════ TIMELINE ═══════════════════════════ -->
-  <section id="timeline">
+  <!-- ═══ JOURNEY (merged education + experience + projects with expandable cards) ═══ -->
+  <section id="journey">
     <div class="section-header">
       <div class="sh-label"><span class="mono">// 02</span> Journey</div>
     </div>
-    <h2 class="section-title">Education &amp; Experience</h2>
+    <h2 class="section-title">Experience &amp; Education</h2>
+    <p class="section-sub">Click any card to expand full details.</p>
 
-    <!-- TOGGLE BUTTONS -->
+    <!-- FILTER -->
     <div class="tl-toggle">
       <button class="tl-btn active" data-tab="all">All</button>
       <button class="tl-btn" data-tab="education">Education</button>
-      <button class="tl-btn" data-tab="experience">Experience</button>
+      <button class="tl-btn" data-tab="research">Research</button>
+      <button class="tl-btn" data-tab="industry">Industry</button>
     </div>
 
-    <div class="tl-wrapper">
-      <div class="tl-line"></div>
-      <div class="tl-items">
+    <div class="cards-grid" id="journey-cards">
 
-        <div class="tl-item edu" data-type="education">
-          <div class="tl-dot edu-dot"></div>
-          <div class="tl-date">2023 – 2025</div>
-          <div class="tl-card">
-            <div class="tl-badge edu-badge">Education</div>
-            <h3>MSc Biomedical Engineering</h3>
-            <p class="tl-org">University of Minnesota – Twin Cities</p>
-          </div>
+      <!-- CARD 1 -->
+      <div class="exp-card" data-type="education" data-id="card-uminn-ms">
+        <div class="ec-header">
+          <div class="ec-type edu">Education</div>
+          <div class="ec-year">2023 – 2025</div>
         </div>
-
-        <div class="tl-item exp" data-type="experience">
-          <div class="tl-dot exp-dot"></div>
-          <div class="tl-date">Jan 2024 – May 2025</div>
-          <div class="tl-card">
-            <div class="tl-badge exp-badge">Research</div>
-            <h3>Graduate Researcher</h3>
-            <p class="tl-org">University of Minnesota</p>
-          </div>
+        <div class="ec-icon-ring">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M4 12 L16 5 L28 12 L16 19 Z" stroke="currentColor" stroke-width="1.5"/><polyline points="8,14.5 8,23 16,27 24,23 24,14.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
         </div>
-
-        <div class="tl-item exp" data-type="experience">
-          <div class="tl-dot exp-dot"></div>
-          <div class="tl-date">May – Aug 2024</div>
-          <div class="tl-card">
-            <div class="tl-badge exp-badge">Industry</div>
-            <h3>QA Intern</h3>
-            <p class="tl-org">Promed Molded Products</p>
-          </div>
-        </div>
-
-        <div class="tl-item edu" data-type="education">
-          <div class="tl-dot edu-dot"></div>
-          <div class="tl-date">2017 – 2021</div>
-          <div class="tl-card">
-            <div class="tl-badge edu-badge">Education</div>
-            <h3>BSc Biomedical Engineering <em>(Honors)</em></h3>
-            <p class="tl-org">Shri G.S. Institute of Technology &amp; Science</p>
-          </div>
-        </div>
-
-        <div class="tl-item exp" data-type="experience">
-          <div class="tl-dot exp-dot"></div>
-          <div class="tl-date">Sep 2021 – Sep 2023</div>
-          <div class="tl-card">
-            <div class="tl-badge exp-badge">Industry</div>
-            <h3>Clinical Data Analyst</h3>
-            <p class="tl-org">Cognizant Technology Solutions</p>
-          </div>
-        </div>
-
-        <div class="tl-item exp" data-type="experience">
-          <div class="tl-dot exp-dot"></div>
-          <div class="tl-date">Jul – Oct 2022</div>
-          <div class="tl-card">
-            <div class="tl-badge exp-badge">Research</div>
-            <h3>R&amp;D Intern</h3>
-            <p class="tl-org">Indian Institute of Technology</p>
-          </div>
-        </div>
-
-        <div class="tl-item exp" data-type="experience">
-          <div class="tl-dot exp-dot"></div>
-          <div class="tl-date">Jul – Sep 2021</div>
-          <div class="tl-card">
-            <div class="tl-badge exp-badge">Industry</div>
-            <h3>Biomedical Device Design Intern</h3>
-            <p class="tl-org">Healthcare Technology &amp; Innovation Center Ltd.</p>
-          </div>
-        </div>
-
-        <div class="tl-item exp" data-type="experience">
-          <div class="tl-dot exp-dot"></div>
-          <div class="tl-date">Apr 2020 – Apr 2021</div>
-          <div class="tl-card">
-            <div class="tl-badge exp-badge">Research</div>
-            <h3>Undergraduate Researcher</h3>
-            <p class="tl-org">Shri G.S. Institute of Technology &amp; Science</p>
-          </div>
-        </div>
-
-        <div class="tl-item exp" data-type="experience">
-          <div class="tl-dot exp-dot"></div>
-          <div class="tl-date">May – Jun 2019</div>
-          <div class="tl-card">
-            <div class="tl-badge exp-badge">Industry</div>
-            <h3>R&amp;D Intern</h3>
-            <p class="tl-org">Shree Pacetronix Ltd.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
-  <section id="projects">
-    <div class="section-header">
-      <div class="sh-label"><span class="mono">// 03</span> Projects</div>
-    </div>
-    <h2 class="section-title">Selected Work</h2>
-
-    <div class="projects-list">
-
-      <div class="proj-row">
-        <div class="proj-num">01</div>
-        <div class="proj-info">
-          <h3>Graduate Research — University of Minnesota</h3>
-          <p>Integrated bioinformatics, machine learning, and advanced laboratory techniques including organoid models, cryo-EM, and electrophysiological recording to advance biomedical understanding.</p>
-          <div class="proj-tags">
-            <span>Machine Learning</span><span>Bioinformatics</span><span>Organoids</span><span>cryo-EM</span>
-          </div>
-        </div>
-        <div class="proj-domains"><span class="pd research">Research</span></div>
+        <h3>MSc Biomedical Engineering</h3>
+        <p class="ec-org">University of Minnesota – Twin Cities</p>
+        <div class="ec-tags"><span>Biomedical Eng</span><span>Research</span><span>Thesis</span></div>
+        <div class="ec-expand-hint">Click to expand <span>↗</span></div>
       </div>
 
-      <div class="proj-row">
-        <div class="proj-num">02</div>
-        <div class="proj-info">
-          <h3>QA Process Optimization — Promed Molded Products</h3>
-          <p>Implemented QA protocols using Gage R&R, Lean Six Sigma, and QCBD to improve manufacturing compliance with FDA QSR and ISO 13485 standards.</p>
-          <div class="proj-tags">
-            <span>ISO 13485</span><span>Lean Six Sigma</span><span>FDA QSR</span><span>QCBD</span>
-          </div>
+      <!-- CARD 2 -->
+      <div class="exp-card" data-type="research" data-id="card-grad-research">
+        <div class="ec-header">
+          <div class="ec-type research">Research</div>
+          <div class="ec-year">Jan 2024 – May 2025</div>
         </div>
-        <div class="proj-domains"><span class="pd industry">Industry</span></div>
+        <div class="ec-icon-ring">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="2" x2="16" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="24" x2="16" y2="30" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="16" x2="8" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="24" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="6.3" y1="6.3" x2="10.5" y2="10.5" stroke="currentColor" stroke-width="1.5"/><line x1="21.5" y1="21.5" x2="25.7" y2="25.7" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3>Graduate Researcher</h3>
+        <p class="ec-org">University of Minnesota</p>
+        <div class="ec-tags"><span>cryo-EM</span><span>ML</span><span>Organoids</span></div>
+        <div class="ec-expand-hint">Click to expand <span>↗</span></div>
       </div>
 
-      <div class="proj-row">
-        <div class="proj-num">03</div>
-        <div class="proj-info">
-          <h3>Clinical Data Analysis — Cognizant Technology Solutions</h3>
-          <p>Analyzed clinical trial datasets using SQL, Python, and PowerBI. Ensured data integrity under HIPAA, GDP, and 21 CFR 820 across multiple healthcare client engagements.</p>
-          <div class="proj-tags">
-            <span>Python</span><span>SQL</span><span>PowerBI</span><span>HIPAA</span><span>Clinical Trials</span>
-          </div>
+      <!-- CARD 3 -->
+      <div class="exp-card" data-type="industry" data-id="card-promed">
+        <div class="ec-header">
+          <div class="ec-type industry">Industry</div>
+          <div class="ec-year">May – Aug 2024</div>
         </div>
-        <div class="proj-domains"><span class="pd data">Data</span></div>
+        <div class="ec-icon-ring">
+          <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M11 8 V5 a1 1 0 0 1 1-1 h8 a1 1 0 0 1 1 1 v3" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="13" x2="16" y2="21" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3>QA Intern</h3>
+        <p class="ec-org">Promed Molded Products</p>
+        <div class="ec-tags"><span>ISO 13485</span><span>FDA QSR</span><span>Six Sigma</span></div>
+        <div class="ec-expand-hint">Click to expand <span>↗</span></div>
       </div>
 
-      <div class="proj-row">
-        <div class="proj-num">04</div>
-        <div class="proj-info">
-          <h3>Biomedical Device Design — HT&amp;IC Ltd.</h3>
-          <p>Contributed to early-stage device design and prototyping. Applied engineering principles and user-centered methodologies to develop patient-focused healthcare solutions.</p>
-          <div class="proj-tags">
-            <span>Device Design</span><span>Prototyping</span><span>SolidWorks</span>
-          </div>
+      <!-- CARD 4 -->
+      <div class="exp-card" data-type="education" data-id="card-bsc">
+        <div class="ec-header">
+          <div class="ec-type edu">Education</div>
+          <div class="ec-year">2017 – 2021</div>
         </div>
-        <div class="proj-domains"><span class="pd devices">Devices</span></div>
+        <div class="ec-icon-ring">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M4 12 L16 5 L28 12 L16 19 Z" stroke="currentColor" stroke-width="1.5"/><polyline points="8,14.5 8,23 16,27 24,23 24,14.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </div>
+        <h3>BSc Biomedical Engineering</h3>
+        <p class="ec-org">Shri G.S. Institute of Technology &amp; Science</p>
+        <div class="ec-tags"><span>Honors</span><span>Biomedical</span></div>
+        <div class="ec-expand-hint">Click to expand <span>↗</span></div>
       </div>
 
-      <div class="proj-row">
-        <div class="proj-num">05</div>
-        <div class="proj-info">
-          <h3>R&amp;D Research — Indian Institute of Technology</h3>
-          <p>Participated in cutting-edge R&D projects at IIT, contributing to biomedical innovation through experimental design, data collection, and analysis.</p>
-          <div class="proj-tags">
-            <span>R&D</span><span>Research</span><span>Experimental Design</span>
-          </div>
+      <!-- CARD 5 -->
+      <div class="exp-card" data-type="industry" data-id="card-cognizant">
+        <div class="ec-header">
+          <div class="ec-type industry">Industry</div>
+          <div class="ec-year">Sep 2021 – Sep 2023</div>
         </div>
-        <div class="proj-domains"><span class="pd research">Research</span></div>
+        <div class="ec-icon-ring">
+          <svg viewBox="0 0 32 32" fill="none"><polyline points="2,26 8,14 13,20 18,8 23,18 28,10 32,10" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </div>
+        <h3>Clinical Data Analyst</h3>
+        <p class="ec-org">Cognizant Technology Solutions</p>
+        <div class="ec-tags"><span>Python</span><span>SQL</span><span>PowerBI</span></div>
+        <div class="ec-expand-hint">Click to expand <span>↗</span></div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="exp-card" data-type="research" data-id="card-iit">
+        <div class="ec-header">
+          <div class="ec-type research">Research</div>
+          <div class="ec-year">Jul – Oct 2022</div>
+        </div>
+        <div class="ec-icon-ring">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M10 26 L10 12 L7 8 L25 8 L22 12 L22 26" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="7" y1="26" x2="25" y2="26" stroke="currentColor" stroke-width="1.5"/><ellipse cx="16" cy="16" rx="4" ry="2.5" stroke="currentColor" stroke-width="1" opacity="0.6"/></svg>
+        </div>
+        <h3>R&amp;D Intern</h3>
+        <p class="ec-org">Indian Institute of Technology</p>
+        <div class="ec-tags"><span>R&D</span><span>Bioinformatics</span></div>
+        <div class="ec-expand-hint">Click to expand <span>↗</span></div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="exp-card" data-type="industry" data-id="card-htic">
+        <div class="ec-header">
+          <div class="ec-type industry">Industry</div>
+          <div class="ec-year">Jul – Sep 2021</div>
+        </div>
+        <div class="ec-icon-ring">
+          <svg viewBox="0 0 32 32" fill="none"><rect x="11" y="2" width="10" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="28" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3>Biomedical Device Design Intern</h3>
+        <p class="ec-org">HT&amp;IC Ltd.</p>
+        <div class="ec-tags"><span>SolidWorks</span><span>3D Print</span><span>ISO 14971</span></div>
+        <div class="ec-expand-hint">Click to expand <span>↗</span></div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="exp-card" data-type="research" data-id="card-undergrad-research">
+        <div class="ec-header">
+          <div class="ec-type research">Research</div>
+          <div class="ec-year">Apr 2020 – Apr 2021</div>
+        </div>
+        <div class="ec-icon-ring">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="2" x2="16" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="24" x2="16" y2="30" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="16" x2="8" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="24" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3>Undergraduate Researcher</h3>
+        <p class="ec-org">Shri G.S. Institute of Technology</p>
+        <div class="ec-tags"><span>Research</span><span>Lab Techniques</span></div>
+        <div class="ec-expand-hint">Click to expand <span>↗</span></div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="exp-card" data-type="industry" data-id="card-pacetronix">
+        <div class="ec-header">
+          <div class="ec-type industry">Industry</div>
+          <div class="ec-year">May – Jun 2019</div>
+        </div>
+        <div class="ec-icon-ring">
+          <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M11 8 V5 a1 1 0 0 1 1-1 h8 a1 1 0 0 1 1 1 v3" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3>R&amp;D Intern</h3>
+        <p class="ec-org">Shree Pacetronix Ltd.</p>
+        <div class="ec-tags"><span>R&D</span><span>Medical Devices</span></div>
+        <div class="ec-expand-hint">Click to expand <span>↗</span></div>
       </div>
 
     </div>
   </section>
 
-  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <!-- ═══ SKILLS ═══ -->
   <section id="skills">
     <div class="section-header">
-      <div class="sh-label"><span class="mono">// 04</span> Skills</div>
+      <div class="sh-label"><span class="mono">// 03</span> Skills</div>
     </div>
     <h2 class="section-title">Technical Expertise</h2>
 
-    <!-- SKILL CATEGORY FILTER -->
     <div class="skill-filter">
       <button class="sf-btn active" data-cat="all">All</button>
       <button class="sf-btn" data-cat="programming">Programming</button>
@@ -369,7 +350,6 @@
     </div>
 
     <div class="skills-cloud" id="skills-cloud">
-      <!-- Programming -->
       <span class="sk programming large">Python</span>
       <span class="sk programming large">SQL</span>
       <span class="sk programming medium">R</span>
@@ -382,7 +362,6 @@
       <span class="sk programming small">HTML5</span>
       <span class="sk programming small">CSS3</span>
       <span class="sk programming small">Linux</span>
-      <!-- Software -->
       <span class="sk software large">MATLAB</span>
       <span class="sk software large">PowerBI</span>
       <span class="sk software medium">SolidWorks</span>
@@ -392,7 +371,6 @@
       <span class="sk software small">MiniTab</span>
       <span class="sk software small">MODELLER</span>
       <span class="sk software small">SaaS</span>
-      <!-- Regulatory -->
       <span class="sk regulatory large">ISO 13485</span>
       <span class="sk regulatory large">FDA QSR</span>
       <span class="sk regulatory medium">EU MDR</span>
@@ -402,7 +380,6 @@
       <span class="sk regulatory small">IEC-60601</span>
       <span class="sk regulatory small">GMP</span>
       <span class="sk regulatory small">GDP</span>
-      <!-- Lab -->
       <span class="sk lab large">cryo-EM</span>
       <span class="sk lab large">qRT-PCR</span>
       <span class="sk lab medium">Flow Cytometry</span>
@@ -419,7 +396,6 @@
       <span class="sk lab small">cDNA Synthesis</span>
       <span class="sk lab small">Spheroids</span>
       <span class="sk lab small">Fluorescent IHC</span>
-      <!-- Technical -->
       <span class="sk technical large">Machine Learning</span>
       <span class="sk technical large">Bioinformatics</span>
       <span class="sk technical medium">3D Printing</span>
@@ -434,24 +410,23 @@
       <span class="sk technical small">GD&T</span>
     </div>
 
-    <!-- CERTIFICATIONS -->
     <div class="certs-row">
       <div class="cert-item">
-        <span class="cert-icon">★</span>
+        <div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
         <div>
           <div class="cert-title">Bachelor's with Honors</div>
           <div class="cert-sub">Shri G.S. Institute of Technology</div>
         </div>
       </div>
       <div class="cert-item">
-        <span class="cert-icon">✦</span>
+        <div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none"><rect x="11" y="2" width="2" height="20" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="20" height="2" rx="1" stroke="currentColor" stroke-width="1.5"/></svg></div>
         <div>
           <div class="cert-title">AMA PRA Category 1 Credit</div>
           <div class="cert-sub">Medical Education Certification</div>
         </div>
       </div>
       <div class="cert-item">
-        <span class="cert-icon">◈</span>
+        <div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="2" x2="12" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="16" x2="12" y2="22" stroke="currentColor" stroke-width="1.5"/></svg></div>
         <div>
           <div class="cert-title">BMES Member</div>
           <div class="cert-sub">Biomedical Engineering Society</div>
@@ -460,10 +435,10 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <!-- ═══ CONTACT ═══ -->
   <section id="contact">
     <div class="section-header">
-      <div class="sh-label"><span class="mono">// 05</span> Contact</div>
+      <div class="sh-label"><span class="mono">// 04</span> Contact</div>
     </div>
     <div class="contact-layout">
       <div class="contact-left">
@@ -500,6 +475,232 @@
       <span>Biomedical Engineer · All Rights Reserved</span>
     </div>
   </footer>
+
+  <!-- ═══ EXPANDABLE PANEL (slide-in from right) ═══ -->
+  <div id="exp-panel-overlay" class="ep-overlay">
+    <div class="ep-panel" id="ep-panel">
+      <button class="ep-close" id="ep-close">✕ Close</button>
+      <div class="ep-content" id="ep-content"></div>
+    </div>
+  </div>
+
+  <!-- ═══ CARD DATA TEMPLATES ═══ -->
+
+  <template id="card-uminn-ms">
+    <div class="ep-badge edu">Education</div>
+    <div class="ep-meta"><span>🗓 2023 – 2025</span><span>📍 University of Minnesota, Twin Cities, MN</span></div>
+    <h2>Master of Science<br><em>Biomedical Engineering</em></h2>
+    <div class="ep-divider"></div>
+    <div class="ep-section"><h5>Overview</h5>
+      <p>Completed a rigorous two-year MSc program at one of the top biomedical engineering programs in the United States, focusing on the integration of engineering principles with life sciences to solve complex healthcare challenges.</p>
+    </div>
+    <div class="ep-section"><h5>Key Focus Areas</h5>
+      <ul>
+        <li>Advanced laboratory research including organoid models, cryo-EM, and electrophysiological recording techniques</li>
+        <li>Bioinformatics and computational biology pipeline development using Python and MATLAB</li>
+        <li>Medical device design, prototyping, and verification &amp; validation (V&V)</li>
+        <li>Regulatory science coursework covering FDA QSR, ISO 13485, and EU MDR frameworks</li>
+        <li>Machine learning applications in biomedical image analysis and data classification</li>
+      </ul>
+    </div>
+    <div class="ep-section"><h5>Skills Developed</h5>
+      <div class="ep-tags"><span>Bioinformatics</span><span>MATLAB</span><span>Python</span><span>cryo-EM</span><span>Organoids</span><span>Machine Learning</span><span>ISO 13485</span><span>FDA QSR</span></div>
+    </div>
+  </template>
+
+  <template id="card-grad-research">
+    <div class="ep-badge research">Research</div>
+    <div class="ep-meta"><span>🗓 Jan 2024 – May 2025</span><span>📍 University of Minnesota</span></div>
+    <h2>Graduate Researcher</h2>
+    <div class="ep-divider"></div>
+    <div class="ep-section"><h5>Overview</h5>
+      <p>Conducted multidisciplinary research at the intersection of computational biology and experimental science. Contributed to advancing biomedical understanding through integration of cutting-edge wet lab techniques with data-driven analysis pipelines.</p>
+    </div>
+    <div class="ep-section"><h5>Key Responsibilities</h5>
+      <ul>
+        <li>Designed and executed experiments using organoid models and spheroid culture systems to study disease mechanisms</li>
+        <li>Applied cryo-electron microscopy (cryo-EM) to characterize protein structures and cellular architectures</li>
+        <li>Conducted electrophysiological recordings to analyze cellular electrical activity and signaling pathways</li>
+        <li>Developed machine learning pipelines in Python for large-scale biological dataset analysis</li>
+        <li>Utilized bioinformatics tools (Biopython, MODELLER, PyMol, ChimeraX) for structural and sequence analysis</li>
+        <li>Performed live cell imaging, confocal microscopy, flow cytometry, and immunocytochemistry</li>
+      </ul>
+    </div>
+    <div class="ep-section"><h5>Techniques &amp; Tools</h5>
+      <div class="ep-tags"><span>cryo-EM</span><span>Organoid Models</span><span>Spheroids</span><span>Electrophysiology</span><span>Machine Learning</span><span>Flow Cytometry</span><span>Confocal Microscopy</span><span>Python</span><span>MATLAB</span><span>Biopython</span><span>ChimeraX</span></div>
+    </div>
+    <div class="ep-section"><h5>Impact</h5>
+      <p>Generated publishable research data and expanded the department's capabilities in multi-modal biomedical analysis across two major projects.</p>
+    </div>
+  </template>
+
+  <template id="card-promed">
+    <div class="ep-badge industry">Industry</div>
+    <div class="ep-meta"><span>🗓 May 2024 – Aug 2024</span><span>📍 Promed Molded Products</span></div>
+    <h2>Quality Assurance Intern</h2>
+    <div class="ep-divider"></div>
+    <div class="ep-section"><h5>Overview</h5>
+      <p>Worked within the QA department of a medical device manufacturer to evaluate, improve, and document manufacturing processes in alignment with FDA and international regulatory standards. Gained hands-on experience with the full quality management lifecycle.</p>
+    </div>
+    <div class="ep-section"><h5>Key Responsibilities</h5>
+      <ul>
+        <li>Conducted Gage R&R studies to validate measurement system accuracy and reliability</li>
+        <li>Applied Lean Six Sigma methodology to identify and eliminate process inefficiencies on the production floor</li>
+        <li>Managed quality documentation within the QCBD quality management system</li>
+        <li>Performed inspections using MicroVu and Keyence measurement systems with GD&T principles</li>
+        <li>Ensured manufacturing compliance with FDA QSR (21 CFR 820) and ISO 13485 standards</li>
+        <li>Participated in CAPA processes, deviation investigations, and non-conformance reporting</li>
+        <li>Supported V&V activities for new product introductions into the manufacturing line</li>
+      </ul>
+    </div>
+    <div class="ep-section"><h5>Standards &amp; Tools</h5>
+      <div class="ep-tags"><span>ISO 13485</span><span>FDA QSR</span><span>21 CFR 820</span><span>Lean Six Sigma</span><span>Gage R&R</span><span>QCBD</span><span>GD&T</span><span>MicroVu</span><span>Keyence</span><span>V&V</span></div>
+    </div>
+    <div class="ep-section"><h5>Impact</h5>
+      <p>Contributed measurable improvements to QC workflows, reducing measurement variability and strengthening the organization's regulatory compliance posture ahead of upcoming audits.</p>
+    </div>
+  </template>
+
+  <template id="card-bsc">
+    <div class="ep-badge edu">Education</div>
+    <div class="ep-meta"><span>🗓 2017 – 2021</span><span>📍 Indore, India</span></div>
+    <h2>Bachelor of Science<br><em>Biomedical Engineering — with Honors</em></h2>
+    <div class="ep-divider"></div>
+    <div class="ep-section"><h5>Overview</h5>
+      <p>Completed a four-year honors program in Biomedical Engineering, laying the foundation for a career at the intersection of engineering, medicine, and technology. Graduated with honors recognition for academic excellence.</p>
+    </div>
+    <div class="ep-section"><h5>Key Focus Areas</h5>
+      <ul>
+        <li>Core biomedical engineering: biomechanics, bioinstrumentation, bioelectricity &amp; biomagnetism</li>
+        <li>Medical device design fundamentals including CAD (SolidWorks, AutoCAD) and prototyping</li>
+        <li>Laboratory science: cell biology, biochemistry, physiology, and experimental techniques</li>
+        <li>Signal processing, telemetry, and biomedical sensor systems (Arduino)</li>
+        <li>Undergraduate research project in biomedical device development</li>
+      </ul>
+    </div>
+    <div class="ep-section"><h5>Achievement</h5>
+      <div class="ep-tags"><span>Graduated with Honors</span><span>Undergraduate Research</span><span>Device Design</span><span>Bioinstrumentation</span></div>
+    </div>
+  </template>
+
+  <template id="card-cognizant">
+    <div class="ep-badge industry">Industry</div>
+    <div class="ep-meta"><span>🗓 Sep 2021 – Sep 2023</span><span>📍 Cognizant Technology Solutions</span></div>
+    <h2>Clinical Data Analyst</h2>
+    <div class="ep-divider"></div>
+    <div class="ep-section"><h5>Overview</h5>
+      <p>Supported multiple healthcare clients across clinical trial operations, data management, and regulatory compliance. Bridged technical software engineering skills with deep domain knowledge in healthcare regulations to deliver reliable, audit-ready clinical data.</p>
+    </div>
+    <div class="ep-section"><h5>Key Responsibilities</h5>
+      <ul>
+        <li>Analyzed and cleaned large-scale clinical trial datasets using SQL and Python for regulatory submissions</li>
+        <li>Built interactive PowerBI dashboards for trial progress tracking and KPI reporting to stakeholders</li>
+        <li>Ensured data integrity and privacy compliance under HIPAA, GDP, and 21 CFR 820 guidelines</li>
+        <li>Worked within Microsoft Azure cloud environment for data pipeline development and storage</li>
+        <li>Authored and reviewed data management plans, validation reports, and SOPs</li>
+        <li>Collaborated with biostatistics, clinical operations, and regulatory teams on cross-functional deliverables</li>
+        <li>Used Jira for project management and issue tracking across global healthcare client engagements</li>
+      </ul>
+    </div>
+    <div class="ep-section"><h5>Technologies &amp; Regulations</h5>
+      <div class="ep-tags"><span>Python</span><span>SQL</span><span>PowerBI</span><span>Azure</span><span>R</span><span>Jira</span><span>HIPAA</span><span>GDP</span><span>21 CFR 820</span></div>
+    </div>
+    <div class="ep-section"><h5>Impact</h5>
+      <p>Delivered clinical data solutions supporting trials across multiple therapeutic areas, achieving zero critical findings during regulatory audits for key accounts over a 2-year tenure.</p>
+    </div>
+  </template>
+
+  <template id="card-iit">
+    <div class="ep-badge research">Research</div>
+    <div class="ep-meta"><span>🗓 Jul – Oct 2022</span><span>📍 Indian Institute of Technology</span></div>
+    <h2>Research &amp; Development Intern</h2>
+    <div class="ep-divider"></div>
+    <div class="ep-section"><h5>Overview</h5>
+      <p>Joined the Indian Institute of Technology as an R&D Intern, contributing to biomedical research initiatives within a top-tier academic environment. Gained exposure to cutting-edge scientific methodology and interdisciplinary collaborative innovation.</p>
+    </div>
+    <div class="ep-section"><h5>Key Responsibilities</h5>
+      <ul>
+        <li>Designed and executed experimental protocols for biomedical investigation</li>
+        <li>Collected, processed, and analyzed experimental data using statistical and computational tools</li>
+        <li>Reviewed and synthesized scientific literature to inform and guide research direction</li>
+        <li>Collaborated with graduate researchers and faculty on active funded research projects</li>
+        <li>Applied bioinformatics tools and advanced laboratory techniques to support investigations</li>
+        <li>Prepared technical summaries and presented findings to the research group</li>
+      </ul>
+    </div>
+    <div class="ep-section"><h5>Skills Applied</h5>
+      <div class="ep-tags"><span>R&D</span><span>Experimental Design</span><span>Bioinformatics</span><span>Data Analysis</span><span>Scientific Writing</span><span>Literature Review</span></div>
+    </div>
+  </template>
+
+  <template id="card-htic">
+    <div class="ep-badge industry">Industry</div>
+    <div class="ep-meta"><span>🗓 Jul – Sep 2021</span><span>📍 Healthcare Technology &amp; Innovation Center Ltd.</span></div>
+    <h2>Biomedical Device Design Intern</h2>
+    <div class="ep-divider"></div>
+    <div class="ep-section"><h5>Overview</h5>
+      <p>Worked on early-stage medical device design and development at HT&IC, contributing to the full design cycle from concept ideation through prototype validation and documentation.</p>
+    </div>
+    <div class="ep-section"><h5>Key Responsibilities</h5>
+      <ul>
+        <li>Participated in concept ideation and design feasibility studies for novel medical devices</li>
+        <li>Created 3D models and engineering drawings using SolidWorks and AutoCAD</li>
+        <li>Produced physical prototypes using 3D printing and traditional fabrication methods</li>
+        <li>Applied ISO 14971 risk management framework and DFM principles throughout design lifecycle</li>
+        <li>Conducted user-centered design research to align device specifications with clinical needs</li>
+        <li>Supported bench-level testing and documented results in design history files (DHF)</li>
+      </ul>
+    </div>
+    <div class="ep-section"><h5>Tools &amp; Standards</h5>
+      <div class="ep-tags"><span>SolidWorks</span><span>AutoCAD</span><span>3D Printing</span><span>ISO 14971</span><span>GD&T</span><span>DHF</span><span>DFM</span><span>Prototyping</span></div>
+    </div>
+    <div class="ep-section"><h5>Impact</h5>
+      <p>Contributed to two patient-assistive device concepts, with one advancing to design freeze during the internship period.</p>
+    </div>
+  </template>
+
+  <template id="card-undergrad-research">
+    <div class="ep-badge research">Research</div>
+    <div class="ep-meta"><span>🗓 Apr 2020 – Apr 2021</span><span>📍 Shri G.S. Institute of Technology &amp; Science</span></div>
+    <h2>Undergraduate Researcher</h2>
+    <div class="ep-divider"></div>
+    <div class="ep-section"><h5>Overview</h5>
+      <p>Participated in a year-long undergraduate research project as part of the honors program, building foundational research skills while contributing to departmental investigations in biomedical device development.</p>
+    </div>
+    <div class="ep-section"><h5>Key Responsibilities</h5>
+      <ul>
+        <li>Conducted literature reviews and synthesized findings relevant to the project scope</li>
+        <li>Designed and ran laboratory experiments under faculty supervision</li>
+        <li>Operated biomedical instruments including signal processing equipment and Arduino-based sensors</li>
+        <li>Analyzed experimental results using MATLAB and statistical methods</li>
+        <li>Presented research progress and outcomes to faculty and peers</li>
+      </ul>
+    </div>
+    <div class="ep-section"><h5>Skills Developed</h5>
+      <div class="ep-tags"><span>Lab Techniques</span><span>MATLAB</span><span>Arduino</span><span>Signal Processing</span><span>Research Design</span></div>
+    </div>
+  </template>
+
+  <template id="card-pacetronix">
+    <div class="ep-badge industry">Industry</div>
+    <div class="ep-meta"><span>🗓 May – Jun 2019</span><span>📍 Shree Pacetronix Ltd.</span></div>
+    <h2>R&amp;D Intern</h2>
+    <div class="ep-divider"></div>
+    <div class="ep-section"><h5>Overview</h5>
+      <p>Gained early industry exposure in R&D at Shree Pacetronix Ltd., a medical device company specializing in cardiac devices. Contributed to research and development activities focused on device performance and innovation.</p>
+    </div>
+    <div class="ep-section"><h5>Key Responsibilities</h5>
+      <ul>
+        <li>Assisted in R&D activities for cardiac monitoring and pacing device components</li>
+        <li>Observed and supported testing of medical device prototypes under engineer supervision</li>
+        <li>Prepared documentation and technical notes for ongoing R&D projects</li>
+        <li>Gained exposure to medical device manufacturing processes and quality standards</li>
+      </ul>
+    </div>
+    <div class="ep-section"><h5>Domain Exposure</h5>
+      <div class="ep-tags"><span>Cardiac Devices</span><span>Medical Device R&D</span><span>Prototyping</span><span>Technical Documentation</span></div>
+    </div>
+  </template>
 
   <script src="script.js"></script>
 </body>
